@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+}
+
+div {
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+#calculator{
+    width: 30rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#display {
+    height: 9.5rem;
+    width: auto;
+    background-color: #cccccc;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#display-content {
+    position: relative;
+    bottom: 15%;
+    right: 2%;
+    font-size: 3rem;
+}
+
+#preview {
+    position: absolute;
+    top: 8%;
+    right: 3%;
+    font-size: 1rem;
+    color: #4d4d4d;
+}
+
+#panel {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "clear-entry clear-all backspace division"
+      "seven eight nine multiply"
+      "four five six minus"
+      "one two three plus"
+      "plus-and-minus zero dot equal";
+    height: 30rem;
+}
+
+.button {
+    border: 2px solid #cccccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover{
+    background: gray;
+}
+
+.white {
+    background-color: whitesmoke;
+    font-weight: bold;
+}
+
+.light-gray {
+    background-color: #e6e6e6;
+}
