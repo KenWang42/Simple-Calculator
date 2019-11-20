@@ -36,7 +36,9 @@ div {
     position: relative;
     bottom: 15%;
     right: 2%;
+    margin-left: 4%;
     font-size: 3rem;
+    overflow: hidden;
 }
 
 #preview {
