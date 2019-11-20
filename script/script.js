@@ -126,6 +126,10 @@ function selectEqual() {
 
 function selectDot() {
   dotButton.addEventListener("click", () => {
+    if(isShow) {
+      display.textContent = "";
+      isShow = 0;
+    }
     if (!display.textContent.includes(".")) {
       display.textContent = display.textContent + ".";
     }
@@ -134,12 +138,20 @@ function selectDot() {
 
 function selectBackspace() {
   backspaceButton.addEventListener("click", () => {
+    if(isShow) {
+      display.textContent = "";
+      isShow = 0;
+    }
     display.textContent = display.textContent.slice(0, -1);
   });
 }
 
 function selectTrans() {
   transButton.addEventListener("click", () => {
+    if(isShow) {
+      display.textContent = "";
+      isShow = 0;
+    }
     if (display.textContent.includes("-")) {
       display.textContent = display.textContent.slice(1);
     } else {
